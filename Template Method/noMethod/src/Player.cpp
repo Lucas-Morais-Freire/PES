@@ -57,11 +57,12 @@ int Player::bonus() {
     }
 }
 
-void Player::damagedBy(Enemy* ent) {
-    int dmg = ent->damage() - resist();
+void Player::damagedBy(Entity* ent) {
+    int dmg = ent->damage() - resist() + ent->bonus();
     if (dmg < 1) {
         dmg = 1;
-    }else if (dmg > life) {
+    }
+    if (dmg > life) {
         life = 0;
     } else {
         life -= dmg;

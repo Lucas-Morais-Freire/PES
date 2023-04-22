@@ -21,7 +21,7 @@ class Player : public Entity {
         int damage();
         int resist();
         int bonus();
-        void damagedBy(Enemy* ent);
+        void damagedBy(Entity* ent);
 };
 
 #endif // PLAYER_H

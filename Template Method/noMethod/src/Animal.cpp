@@ -15,21 +15,8 @@ int Animal::resist() {
     return res;
 }
 
-void Animal::damagedBy(Player* ent) {
-    int dmg = ent->damage() - resist() + ent->bonus();
-    if (dmg < 1) {
-        dmg = 1;
-    }else if (dmg > life) {
-        life = 0;
-    } else {
-        life -= dmg;
-    }
-    std::cout << ent->getName() << " attacked " << name << "\n";
-    std::cout << name << "'s health: " << life << "\n";
-}
-
-void Animal::damagedBy(Enemy* ent) {
-    int dmg = ent->damage() - resist();
+void Animal::damagedBy(Entity* ent) {
+    int dmg = ent->damage() - resist() + bonus();
     if (dmg < 1) {
         dmg = 1;
     }else if (dmg > life) {

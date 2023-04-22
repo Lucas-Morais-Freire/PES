@@ -11,8 +11,7 @@ class Animal : public Entity {
     public:
         Animal(const char* _name, int _life, int _res);
         int resist();
-        void damagedBy(Player* ent);
-        void damagedBy(Enemy* ent);
+        void damagedBy(Entity* ent);
 };
 
 #endif // ANIMAL_H

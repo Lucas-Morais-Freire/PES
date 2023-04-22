@@ -13,7 +13,7 @@ class Enemy : public Entity {
         Enemy(const char* _name, int _life, int _dmg, int _res);
         int damage();
         int resist();
-        void damagedBy(Player* ent);
+        void damagedBy(Entity* ent);
 };
 
 #endif // ENEMY_H

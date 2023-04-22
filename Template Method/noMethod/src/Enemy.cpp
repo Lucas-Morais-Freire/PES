@@ -19,7 +19,7 @@ int Enemy::resist() {
     return res;
 }
 
-void Enemy::damagedBy(Player* ent) {
+void Enemy::damagedBy(Entity* ent) {
     int dmg = ent->damage() - resist() + ent->bonus();
     if (dmg < 1) {
         dmg = 1;
