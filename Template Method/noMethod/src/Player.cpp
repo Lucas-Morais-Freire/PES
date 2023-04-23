@@ -4,8 +4,6 @@
 #include <chrono>
 #include <random>
 
-#include "../headers/Enemy.h"
-
 Player::Player(const char* _name) {
     name = _name;
     level = 1;
